@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Barbearia Alura</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .logo {
+            max-width: 200px;
+            margin: 0 auto;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .produto {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .produto img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .produto h2 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .produto-descricao {
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        .produto-preco {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .footer-logo {
+            max-width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo Barbearia Alura" class="logo">
+        <nav>
+            <ul>
+                <li><a href="HTMLPage1.html">Home</a></li> <!-- Alterado o link para HTMLPage1.html -->
+                <li><a href="index.html">Produtos</a></li> <!-- Mantido o link para index.html -->
+                <li><a href="HTMLPage2.html">Contato</a></li> <!-- Alterado o link para HTMLPage2.html -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Nossos Produtos</h1>
+        <div class="produto">
+            <img src="cabelo.jpg" alt="Cabelo">
+            <h2>Cabelo</h2>
+            <p class="produto-descricao">Na tesoura ou máquina, como o cliente preferir.</p>
+            <p class="produto-preco">R$ 25,99</p>
+        </div>
+        <div class="produto">
+            <img src="barba.jpg" alt="Barba">
+            <h2>Barba</h2>
+            <p class="produto-descricao">Barba, cortada na preferência do cliente.</p>
+            <p class="produto-preco">R$ 18,00</p>
+        </div>
+        <div class="produto">
+            <img src="cabelobarba.png" alt="Cabelo + Barba">
+            <h2>Cabelo + Barba</h2>
+            <p class="produto-descricao">Pacote completo de cabelo e barba.</p>
+            <p class="produto-preco">R$ 35,00</p>
+        </div>
+    </main>
+
+    <footer>
+        <img src="logobranco.png" alt="Logo Branco" class="footer-logo">
+        <p class="copyright">&copy; 2023 Barbearia Alura</p>
+    </footer>
+</body>
+</html>
