@@ -1,8 +1,7 @@
 ﻿<!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato - Barbearia Alura</title>
     <link rel="stylesheet" href="style.css">
     <style>
@@ -16,13 +15,14 @@
         header {
             background-color: #333;
             color: #fff;
-            padding: 20px 0;
             text-align: center;
+            padding: 20px 0;
         }
 
-        .logo {
-            max-width: 200px;
-            margin: 0 auto;
+        header h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
         }
 
         nav ul {
@@ -35,10 +35,9 @@
             margin-right: 20px;
         }
 
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
+        .caixa {
+            width: 80%;
+            margin: 0 auto;
         }
 
         main {
@@ -46,57 +45,153 @@
             margin: 20px auto;
             background-color: #fff;
             padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
         }
 
-        h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #333;
         }
 
-        .contato-info {
-            font-size: 16px;
-            margin: 10px 0;
+        .input-padrao {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
 
-        footer {
+        textarea.input-padrao {
+            resize: vertical;
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .checkbox {
+            margin-top: 10px;
+        }
+
+        .enviar {
             background-color: #333;
             color: #fff;
-            padding: 10px 0;
-            text-align: center;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
         }
 
-        .footer-logo {
-            max-width: 100px;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        /* Estilos adicionais para links */
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Logo Barbearia Alura" class="logo">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html">Produtos</a></li> <!-- Alterado o link para index.html -->
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-        </nav>
+        <div class="caixa">
+            <h1><a href="index.html"><img src="logo.png" alt="Logo da Barbearia Alura"></a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <h1>Entre em Contato Conosco</h1>
-        <p class="contato-info">Barbearia Alura</p>
-        <p class="contato-info">Rua Fictícia, 123</p>
-        <p class="contato-info">Cidade Imaginária</p>
-        <p class="contato-info">Estado dos Sonhos</p>
-        <p class="contato-info">CEP: 12345-678</p>
-        <p class="contato-info">Telefone: (11) 1234-5678</p>
-        <p class="contato-info">Email: contato@barbeariaalura.com</p>
-    </main>
+        <div class="caixa">
+            <form>
+                <label for="nomesobrenome">Nome e sobrenome</label>
+                <input type="text" id="nomesobrenome" class="input-padrao" required>
 
-    <footer>
-        <img src="logobranco.png" alt="Logo Branco" class="footer-logo">
-        <p class="copyright">&copy; 2023 Barbearia Alura</p>
-    </footer>
+                <label for="email">Email</label>
+                <input type="email" id="email" class="input-padrao" required placeholder="seuemail@dominio.com">
+
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" class="input-padrao" required placeholder="(XX) XXXXX-XXXX">
+
+                <label for="mensagem">Mensagem</label>
+                <textarea cols="70" rows="10" id="mensagem" class="input-padrao" required></textarea>
+
+                <fieldset>
+                    <legend>Como prefere o nosso contato?</legend>
+                    <label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email">Email</label>
+                    <label for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-telefone">Telefone</label>
+                    <label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp" checked>WhatsApp</label>
+                </fieldset>
+
+                <fieldset>   
+                    <legend>Qual horário prefere ser atendido?</legend>
+                    <select>
+                        <option>Manhã</option>
+                        <option>Tarde</option>
+                        <option>Noite</option>
+                    </select>
+                </fieldset>
+
+                <label class="checkbox"><input type="checkbox" checked>Gostaria de receber nossas novidades por email?</label>
+
+                <input type="submit" value="Enviar formulário" class="enviar">
+            </form>
+
+            <table>
+                <tr>
+                    <td>Dia</td>
+                    <td>Horário</td>
+                </tr>
+                <tr>
+                    <td>Segunda</td>
+                    <td>8h ~ 20h</td>
+                </tr>
+                <tr>
+                    <td>Quarta</td>
+                    <td>8h ~ 20h</td>
+                </tr>
+                <tr>
+                    <td>Quinta</td>
+                    <td>8h ~ 20h</td>
+                </tr>
+                <tr>
+                    <td>Sexta</td>
+                    <td>8h ~ 20h</td>
+                </tr>
+            </table>
+        </div>
+    </main>
 </body>
 </html>
